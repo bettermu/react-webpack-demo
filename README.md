@@ -24,6 +24,7 @@ npm run dev   //开发环境渲染
   * webpack-dev-server ：开发环境本地服务
   * webpack-merge ：组合webpack配置的工具函数
   * sass less stylus等样式文件编译loader
+    * 分别对应编译了 sass less stylus文件
   
 
 
