@@ -115,6 +115,31 @@ module.exports = {
           }
         ]
       },
+
+      //文件加载file-loader
+      //{
+      //  test: /\.(png|jpg|gif|woff|svg|eot|woff2|tff)$/,
+      //  use: 'url-loader?limit=8129', 
+      //  //注意后面那个limit的参数，当你图片大小小于这个限制的时候，会自动启用base64编码图片
+      //  exclude: /node_modules/
+      //},
+
+      {
+        test: /\.(svg|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            //name:'img/[name].[hash:7].[ext]',
+            outputPath: 'assets/',
+            publicPath: './assets/'
+          }
+        }],
+
+      },
+      //{// 配置html里引用图片
+      //  test: /\.html$/i,
+      //  use: 'html-withimg-loader'
+      //},
     ]
   }
 }
