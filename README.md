@@ -23,6 +23,8 @@ npm run dev   //开发环境渲染
   * html-webpack-plugin ：html模板编译插件
   * webpack-dev-server ：开发环境本地服务
   * webpack-merge ：组合webpack配置的工具函数
+  * sass less stylus等样式文件编译loader
+  
 
 
 
