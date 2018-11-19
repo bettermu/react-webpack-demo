@@ -35,6 +35,14 @@ npm run dev   //开发环境渲染
   <img src={require('./img/avatar.jpg')} />
   ```
   这样，我们的file-loader模块便能识别，并按照引入路径打包入实际生成的文件。
+
+  * 完成tab选项卡的小示例（目前预览效果）   
+  
+  ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/1.png?raw=true)
+
+
+
+
   
 
 
