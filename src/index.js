@@ -4,22 +4,12 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './app'
 
+import Router from './router'
 //ReactDom.render(<App />,document.getElementById('root'))
 
-import { HashRouter, Route, hashHistory, Switch } from 'react-router-dom'
-    
-    
-    
-const SliderComponent = () => (
-  <Switch>
-    <Route exact path='/' component={App} />
-  </Switch>
-)
+
     
 ReactDOM.render((
-  <HashRouter history={hashHistory}>
-    <SliderComponent />
-  </HashRouter>
+  <Router />
 ), document.getElementById('root'));
