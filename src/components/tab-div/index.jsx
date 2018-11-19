@@ -11,7 +11,6 @@ class TabDiv extends Component {
   render(){
     const {activeIndex} = this.props
     const {data} = this.state
-    console.log(data)
     return(
       <ul>
         {

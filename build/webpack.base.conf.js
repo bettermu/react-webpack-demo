@@ -1,7 +1,11 @@
 const path = require('path')
 
-const APP_PATH = path.resolve(__dirname, '../src')
-const DIST_PATH = path.resolve(__dirname, '../dist')
+const resolve = dir => path.resolve(__dirname,dir)
+
+const APP_PATH = resolve('../src')
+const DIST_PATH = resolve('../dist')
+
+
 
 module.exports = {
   entry: {
@@ -19,7 +23,9 @@ module.exports = {
 
     //配置别名
     alias:{
-      'components':path.resolve(__dirname,'../src/components')
+      'components':resolve('../src/components'),
+      'src':resolve('../src'),
+      'views':resolve('../src/views')
     }
   },
   module: {

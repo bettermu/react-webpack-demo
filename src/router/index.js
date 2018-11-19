@@ -1,11 +1,14 @@
 import { HashRouter, Route, hashHistory, Switch } from 'react-router-dom'
 import React,{Component} from 'react'
-import App from '../app'
+import App from 'src/app'
+import Index from 'views/index'
+import News from 'views/news'
     
     
 const SliderComponent = () => (
   <Switch>
-    <Route exact path='/' component={App} />
+    <Route exact path='/' component={Index} />
+    <Route exact path='/news' component={News} />
   </Switch>
 )
 
@@ -17,7 +20,13 @@ class Router extends Component {
   render(){
     return(
       <HashRouter history={hashHistory}>
-        <SliderComponent />
+      <Route render={()=>{
+        return(
+          <App>
+            <SliderComponent />
+          </App>
+        )
+      }}/>
       </HashRouter>
     )
   }

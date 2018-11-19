@@ -1,19 +1,19 @@
 .wrapper {
   background-color:#f1f1f1;
   .header {
-    height:30px;
+    height:100px;
     background-color:#eee;
     .headerImg {
       height:10px;
     }
   }
   .main {
-    height:30px;
+    height:300px;
     background:url('../img/avatar.jpg') no-repeat #ddd;
     background-size:30px 30px;
   }
   .footer {
-    height:30px;
+    height:100px;
     background-color:#ccc;
   }
 }
