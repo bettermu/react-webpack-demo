@@ -12,6 +12,16 @@ module.exports = {
     filename: 'js/bundle.js',
     path: DIST_PATH
   },
+  //配置模块如何被解析
+  resolve:{
+    //从左往右依次执行自动添加解析后缀
+    extensions:['.js','.jsx','.json'],
+
+    //配置别名
+    alias:{
+      'components':path.resolve(__dirname,'../src/components')
+    }
+  },
   module: {
     rules: [{
         test: /\.(js|jsx)$/,
