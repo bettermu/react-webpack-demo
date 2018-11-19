@@ -40,6 +40,69 @@ npm run dev   //开发环境渲染
   
   ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/1.png?raw=true)
 
+  * 整理路由代码，完成基本的页面跳转
+
+  ### 关于如何在子组件中获取路由信息(withRouter的使用
+
+  ```js
+  import React,{Component} from 'react'
+  import {withRouter} from 'react-router-dom'
+
+  class App extends Component{
+    ...
+    render(){
+      console.log(this.props)
+      return(
+        ...
+      )
+    }
+  }
+
+  export default withRouter(App)
+  ```
+
+  如上面代码,我们就可以在子组件的props中，获取到路由的相关信息。如图：  
+
+  ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/2.png?raw=true)
+
+  当然，还有另一种写法,就是ES6的装饰器，@withRouter,可以极大的简化代码结构。步骤如下：
+
+  首先，安装transform-decorators-legacy
+
+  ```
+  npm install transform-decorators-legacy --save-dev
+  ```
+
+  然后，记得在babelrc文件里加入如下的代码：
+
+  ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/3.png?raw=true)
+
+  最后，修改上面的组件代码：
+
+```js
+  import React,{Component} from 'react'
+  import {withRouter} from 'react-router-dom'
+
+  @withRouter
+  class App extends Component{
+    ...
+    render(){
+      console.log(this.props)
+      return(
+        ...
+      )
+    }
+  }
+
+  export default App
+  ```
+
+  就可以顺利读取到路由信息了：
+
+  ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/2.png?raw=true)
+
+
+
 
 
 

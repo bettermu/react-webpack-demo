@@ -1,8 +1,10 @@
 import React,{Component} from 'react'
+import {withRouter} from 'react-router-dom'
 import './index.styl'
 
 import TabDiv from '../tab-div'
 
+@withRouter
 class Tab extends Component {
   constructor(props){
     super(props)
@@ -23,6 +25,7 @@ class Tab extends Component {
 
   render(){
     const {data,activeIndex} = this.state
+    console.log(this.props)
     return(
       <div className="tab-wrap">
         <ul>
