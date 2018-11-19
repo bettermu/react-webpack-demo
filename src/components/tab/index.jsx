@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
 import './index.styl'
 
+import TabDiv from '../tab-div'
+
 class Tab extends Component {
   constructor(props){
     super(props)
@@ -31,6 +33,7 @@ class Tab extends Component {
           }
           
         </ul>
+        <TabDiv activeIndex={activeIndex}/>
       </div>
     )
   }
