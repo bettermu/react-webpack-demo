@@ -128,7 +128,7 @@ npm run dev   //开发环境渲染
   具体使用方式，[本文](https://www.jianshu.com/p/a2d4c1856560)有讲解，按照步骤来就可以了；
 
 
-在这里有个问题，就是，我们只是需要在开发环境里引用devtools，如下：
+在这里有个问题，就是，我们只是需要在开发环境里引用devtools，生产环境不想使用devtools，原来代码如下：
 
 ```js
 //index.js
@@ -185,6 +185,15 @@ ReactDOM.render((
   renderByEnv(process.env.NODE_ENV) 
 ), document.getElementById('root'));
 ```
+
+分别运行npm run dev和npm run build 可以看到区别：
+
+![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/5.png?raw=true)   
+
+![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/6.png?raw=true)
+
+
+
 
 
 

@@ -11,7 +11,7 @@ import Router from './router'
 import DevTools from './utils/devTools'
 //ReactDom.render(<App />,document.getElementById('root'))
    
-//console.log(process.env.NODE_ENV)
+console.log(process.env.NODE_ENV)
 
 const renderByEnv = env =>{
   if(env === 'development'){
