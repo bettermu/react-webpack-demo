@@ -1,13 +1,13 @@
 import { HashRouter, Route, hashHistory, Switch } from 'react-router-dom'
 import React,{Component} from 'react'
 import App from 'src/app'
-import Index from 'views/index'
+import Home from 'views/home'
 import News from 'views/news'
     
     
 const SliderComponent = () => (
   <Switch>
-    <Route exact path='/' component={Index} />
+    <Route exact path='/' component={Home} />
     <Route exact path='/news' component={News} />
   </Switch>
 )

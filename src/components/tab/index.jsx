@@ -25,7 +25,7 @@ class Tab extends Component {
 
   render(){
     const {data,activeIndex} = this.state
-    console.log(this.props)
+    //console.log(this.props)
     return(
       <div className="tab-wrap">
         <ul>

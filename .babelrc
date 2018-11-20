@@ -14,6 +14,6 @@
     ],
     "react"
   ],
-  "plugins":["transform-decorators-legacy"]
+  "plugins":["transform-decorators-legacy","babel-plugin-transform-object-rest-spread"]
 }
 
