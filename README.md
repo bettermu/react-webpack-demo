@@ -190,10 +190,12 @@ ReactDOM.render((
 
 分别运行npm run dev和npm run build 可以看到区别：
 
-开发环境 
+开发环境:    
+
 ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/5.png?raw=true)     
 
-生产环境：  
+生产环境:   
+    
 ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/6.png?raw=true)
 
 
