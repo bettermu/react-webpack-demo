@@ -36,6 +36,8 @@ npm run dev   //开发环境渲染
 
   * 引入redux相关 进行状态管理
 
+  * 引入redux-devtools对store状态树进行监控
+
 
   ### 关于在jsx里使用img标签引入图片的问题  
 
@@ -188,8 +190,10 @@ ReactDOM.render((
 
 分别运行npm run dev和npm run build 可以看到区别：
 
-![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/5.png?raw=true)   
+开发环境 
+![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/5.png?raw=true)     
 
+生产环境：  
 ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/6.png?raw=true)
 
 
