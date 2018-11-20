@@ -26,15 +26,7 @@ npm run dev   //开发环境渲染
   * sass less stylus等样式文件编译loader
     * 分别对应编译了 sass less stylus文件
   * 引入file-loader url-loader对静态资源图片等进行引入和打包
-  * 关于在jsx里使用img标签引入图片的问题，实际上，我们写上如下的路径是无法解析成功的：
-  ```html
-  <img src="./img/avatar.jpg" />
-  ```
-    如上的路径，会原封不动打包到浏览器里，不会有任何效果，如果希望webpack按照实际打包的路径进行引用，就需要能够让webpack识别，也就是file-loader这个加载器识别，因此，需要按以下方式载入：
-  ```js
-  <img src={require('./img/avatar.jpg')} />
-  ```
-  这样，我们的file-loader模块便能识别，并按照引入路径打包入实际生成的文件。
+  
 
   * 完成tab选项卡的小示例（目前预览效果）   
   
@@ -43,6 +35,19 @@ npm run dev   //开发环境渲染
   * 整理路由代码，完成基本的页面跳转
 
   * 引入redux相关 进行状态管理
+
+
+  ### 关于在jsx里使用img标签引入图片的问题  
+
+  实际上，我们写上如下的路径是无法解析成功的：
+  ```html
+  <img src="./img/avatar.jpg" />
+  ```
+    如上的路径，会原封不动打包到浏览器里，不会有任何效果，如果希望webpack按照实际打包的路径进行引用，就需要能够让webpack识别，也就是file-loader这个加载器识别，因此，需要按以下方式载入：
+  ```js
+  <img src={require('./img/avatar.jpg')} />
+  ```
+  这样，我们的file-loader模块便能识别，并按照引入路径打包入实际生成的文件。
 
   ### 关于如何在子组件中获取路由信息(withRouter的使用
 
