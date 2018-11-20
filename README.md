@@ -123,6 +123,76 @@ npm run dev   //开发环境渲染
 
 
 
+  ### 如何使用Redux-devtools监视Redux状态树的store
+
+  具体使用方式，[本文](https://www.jianshu.com/p/a2d4c1856560)有讲解，按照步骤来就可以了；
+
+
+在这里有个问题，就是，我们只是需要在开发环境里引用devtools，如下：
+
+```js
+//index.js
+...
+ReactDOM.render((
+  <Provider store={store}>
+    <div>
+      <Router />
+      <DevTools />  //那么这里如何区分开开发环境和生产环境呢？
+    </div>
+  </Provider>
+  
+), document.getElementById('root'));
+```
+那么，上面的代码应该如何改造呢？
+
+下面需要用到一个工具：cross-env，这个工具主要就是，能够让我们在代码里做出判断，识别出当前命令行所执行的具体环境参数，在package.json里这么设置：
+
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.conf.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
+  },
+```
+
+那么，运行具体的命令，我们就能在代码里就可以通过 process.env.NODE_ENV 来访问到当前所在的环境，那么有了这个，我们就可以根据这个参数，来有条件的渲染devtools插件了,修改代码如下
+
+```js
+//index.js
+...
+const renderByEnv = env =>{
+  if(env === 'development'){
+    return(
+      <Provider store={store}>
+        <div>
+          <Router />
+          <DevTools />
+        </div>
+      </Provider>
+    )
+  } else {
+    return(
+      <Provider store={store}>
+        <div>
+          <Router />
+        </div>
+      </Provider>
+    )
+  }
+}
+
+ReactDOM.render((
+  renderByEnv(process.env.NODE_ENV) 
+), document.getElementById('root'));
+```
+
+
+
+
+
+
+
+
 
 
 
