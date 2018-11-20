@@ -25,18 +25,24 @@ npm run dev   //开发环境渲染
   * webpack-merge ：组合webpack配置的工具函数
   * sass less stylus等样式文件编译loader
     * 分别对应编译了 sass less stylus文件
+
+* 2018.11.19
+
   * 引入file-loader url-loader对静态资源图片等进行引入和打包
   
-
   * 完成tab选项卡的小示例（目前预览效果）   
   
   ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/1.png?raw=true)
 
+
   * 整理路由代码，完成基本的页面跳转
+
+* 2018.11.20
 
   * 引入redux相关 进行状态管理
 
   * 引入redux-devtools对store状态树进行监控
+
 
 
   ### 关于在jsx里使用img标签引入图片的问题  
@@ -195,7 +201,7 @@ ReactDOM.render((
 ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/5.png?raw=true)     
 
 生产环境:   
-    
+
 ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/6.png?raw=true)
 
 
