@@ -102,6 +102,19 @@ npm run dev   //开发环境渲染
   ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/2.png?raw=true)
 
 
+  ### 打包报错，babel不识别...语法怎么办
+
+  安装babel-plugin-transform-object-rest-spread：
+
+  ```
+  npm install babel-plugin-transform-object-rest-spread --save-dev
+  ```
+
+  接着，在babelrc文件的plugins里添加babel-plugin-transform-object-rest-spread插件，就可以了
+
+  ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/4.png?raw=true)
+
+
 
 
 
