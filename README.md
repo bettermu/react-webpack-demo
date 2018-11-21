@@ -261,6 +261,16 @@ ReactDOM.render((
 
 使用了jsx的判断表达式，代替了条件分支语句。
 
+### 关于在reducer中直接修改state布尔值属性的问题
+
+遇到个问题，在编写loading组件的时候，showloading和hideloading的reducer中，按照下图注释的代码去写死，不起作用：
+
+![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/8.png?raw=true)
+
+但是按照额外的传入参数值，确实可以正确响应的：
+
+![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/9.png?raw=true)
+
 
 
 
