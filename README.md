@@ -215,6 +215,52 @@ ReactDOM.render((
 
 ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/6.png?raw=true)
 
+ps：做个小优化，上面做环境判断的代码过于冗长，下面做出调整：
+
+```js
+//index.js
+...
+const renderByEnv = env =>{
+  //if(env === 'development'){
+  //  return(
+  //    <Provider store={store}>
+  //      <div>
+  //        <Router />
+  //        <DevTools />
+  //      </div>
+  //    </Provider>
+  //  )
+  //} else {
+  //  return(
+  //    <Provider store={store}>
+  //      <div>
+  //        <Router />
+  //      </div>
+  //    </Provider>
+  //  )
+  //}
+
+  return(
+    <Provider store={store}>
+      <div>
+        <Router />
+        {
+          env === 'development'?(<DevTools />):('')
+        }
+      </div>
+    </Provider>
+  )
+  
+}
+
+ReactDOM.render((
+  renderByEnv(process.env.NODE_ENV) 
+), document.getElementById('root'));
+
+```
+
+使用了jsx的判断表达式，代替了条件分支语句。
+
 
 
 
