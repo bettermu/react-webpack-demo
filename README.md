@@ -88,7 +88,7 @@ npm run dev   //开发环境渲染
 
   ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/2.png?raw=true)
 
-  当然，还有另一种写法,就是ES6的装饰器，@withRouter,可以极大的简化代码结构。步骤如下：
+  当然，还有另一种写法,就是ES7的装饰器，@withRouter,可以极大的简化代码结构。步骤如下：
 
   首先，安装transform-decorators-legacy
 
