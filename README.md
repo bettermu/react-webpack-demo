@@ -47,6 +47,8 @@ npm run dev   //开发环境渲染
 
   * 安装axios，配置开发环境proxy代理(数据测试是用的[网易云音乐API](https://binaryify.github.io/NeteaseCloudMusicApi/#/))
 
+  * 做数据获取测试，相关actions,reducer编写
+
 
 
   ### 关于在jsx里使用img标签引入图片的问题  
