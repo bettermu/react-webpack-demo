@@ -31,6 +31,13 @@ module.exports = merge(baseWebpackConfig, {
     https: false,
     noInfo: true,
     open: true,
-    proxy: {}
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    }
   }
 })
