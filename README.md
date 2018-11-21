@@ -43,6 +43,10 @@ npm run dev   //开发环境渲染
 
   * 引入redux-devtools对store状态树进行监控
 
+* 2018.11.21
+
+  * 安装axios，配置开发环境proxy代理(数据测试是用的[网易云音乐API](https://binaryify.github.io/NeteaseCloudMusicApi/#/))
+
 
 
   ### 关于在jsx里使用img标签引入图片的问题  

@@ -14,24 +14,36 @@ import DevTools from './utils/devTools'
 console.log(process.env.NODE_ENV)
 
 const renderByEnv = env =>{
-  if(env === 'development'){
-    return(
-      <Provider store={store}>
-        <div>
-          <Router />
-          <DevTools />
-        </div>
-      </Provider>
-    )
-  } else {
-    return(
-      <Provider store={store}>
-        <div>
-          <Router />
-        </div>
-      </Provider>
-    )
-  }
+  //if(env === 'development'){
+  //  return(
+  //    <Provider store={store}>
+  //      <div>
+  //        <Router />
+  //        <DevTools />
+  //      </div>
+  //    </Provider>
+  //  )
+  //} else {
+  //  return(
+  //    <Provider store={store}>
+  //      <div>
+  //        <Router />
+  //      </div>
+  //    </Provider>
+  //  )
+  //}
+
+  return(
+    <Provider store={store}>
+      <div>
+        <Router />
+        {
+          env === 'development'?(<DevTools />):('')
+        }
+      </div>
+    </Provider>
+  )
+  
 }
 
 ReactDOM.render((
