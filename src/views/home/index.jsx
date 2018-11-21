@@ -1,5 +1,6 @@
 import React , {Component} from 'react'
 import Tab from 'components/tab/index'
+import Loading from 'components/loading'
 import Connect from 'connect'
 
 @Connect
@@ -32,7 +33,8 @@ class Index extends Component {
   render(){
     const number = this.props.state.news.number
     const hots = this.props.state.home.hot
-    console.log(hots)
+    const loading = this.props.state.common.loading
+    //console.log(hots)
     
     return(
       <div>
@@ -44,6 +46,9 @@ class Index extends Component {
         </div>
         <div className="main"><Tab /></div>
         <div className="footer">
+          {
+            loading?(<Loading />):''
+          }
           <ul>
             {
               hots.map((item,i)=>(

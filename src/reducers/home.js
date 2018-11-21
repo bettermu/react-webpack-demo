@@ -5,7 +5,7 @@ const state = {
 }
 
 export const home = handleActions({
-  'GET_HOT_DATA':(state,action)=>{
+  GET_HOT_DATA:(state,action)=>{
     state.hot = action.payload
     return {
       ...state
