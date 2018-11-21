@@ -49,6 +49,8 @@ npm run dev   //开发环境渲染
 
   * 做数据获取测试，相关actions,reducer编写
 
+  * 编写loading测试组件
+
 
 
   ### 关于在jsx里使用img标签引入图片的问题  
