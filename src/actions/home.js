@@ -5,7 +5,7 @@ export const getHotData = () => dispatch => {
     dispatch(createAction('SHOW_LOADING')(true))
 
     getHotDataApi().then(res=>{
-      console.log(res.data)
+      //console.log(res.data)
       dispatch(createAction('HIDE_LOADING')(false))
       dispatch(createAction('GET_HOT_DATA')(res.data.result.hots))
     })
