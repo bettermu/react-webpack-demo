@@ -55,6 +55,8 @@ npm run dev   //开发环境渲染
 
   * 添加api接口文件夹，优化代码分离
 
+  * 引入better-scroll，编写swiper组件
+
 
 
   ### 关于在jsx里使用img标签引入图片的问题  
