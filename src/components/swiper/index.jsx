@@ -7,34 +7,63 @@ import Connect from 'connect'
 class Swiper extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      activeIndex:0,
+    }
   }
 
   componentWillMount() {
     const { getBanner } = this.props
     getBanner().then(()=>{
-      this.setWrapWidth()
-      let scroll = new BScroll('.swiper-outwrap', {
-        scrollX: true,
-        scrollY: false,
-        momentum: false,
-        snap: {
-          loop:true
-        },
-        //snapLoop: true,
-        snapThreshold: 0.3,
-        snapSpeed: 400,
-      })
+      
+      this._setWrapWidth()
+      this._initSwiper()
+      
     })
   }
 
+  _initSwiper(){
+
+    let scroll = new BScroll('.swiper-outwrap', {
+      scrollX: true,
+      scrollY: false,
+      momentum: false,
+      snap: {
+        loop:true
+      },
+      //snapLoop: true,
+      snapThreshold: 0.3,
+      snapSpeed: 400,
+    })
+
+    this.setState({
+      scrollObj:scroll
+    })
+
+    scroll.on('scrollEnd',()=>{
+      let pageIndex = scroll.getCurrentPage().pageX
+      //console.log(pageIndex)
+      this.setState({
+        activeIndex:pageIndex
+      })
+    })
+
+
+  }
+
+  
+
   componentDidMount() {
+
+    
+
   }
   componentWillUpdate(){
     
   }
 
 
-  setWrapWidth() {
+  _setWrapWidth() {
     let wrapWidth = 0
     let len = this.inner.children.length + 2
     let slideWidth = this.inner.children[0].clientWidth
@@ -55,6 +84,13 @@ class Swiper extends Component {
           {
             banners.map((item, i) => (
               <img key={i} src={item.picUrl} alt="" />
+            ))
+          }
+        </div>
+        <div className="dots">
+          {
+            banners.map((item,i)=>(
+              <span key={i} className={this.state.activeIndex === i?'active':''}></span>
             ))
           }
         </div>
