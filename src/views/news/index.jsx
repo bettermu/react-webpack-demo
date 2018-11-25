@@ -1,4 +1,5 @@
 import React , {Component} from 'react'
+import Swiper from 'components/swiper'
 
 class News extends Component {
   constructor(props){
@@ -7,7 +8,11 @@ class News extends Component {
 
   render(){
     return (
-      <div>我是news</div>
+      <div>
+        <div>我是news</div>
+        <Swiper></Swiper>
+      </div>
+      
     )
   }
 }
