@@ -59,7 +59,7 @@ npm run dev   //开发环境渲染
 
   * 完成swiper分页器功能
 
-  * 效果如下
+  * 效果如下  
   ![](https://github.com/bettermu/blog-picture-store/blob/master/react-webpack-demo/10.png?raw=true)
 
 
